@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS Alboms (
 CREATE TABLE IF NOT EXISTS ArtistsAlboms (
 		albom_id INTEGER NOT NULL REFERENCES Alboms(id),
 		artists_id INTEGER NOT NULL REFERENCES Artists(id),
+		UNIQUE(albom_id, artists_id)
 
 );
 
